@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="panel panel-inverse" data-sortable-id="table-basic-6" style="">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand" data-original-title="" title="" data-init="true"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload" data-original-title="" title="" data-init="true"><i class="fa fa-repeat"></i></a>
+                            </div>
+                            <h4 class="panel-title">EVENTOS REGISTRADOS</h4>
+                        </div>
+                        <div class="panel-body">
+                        	<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<th># ID</th>
+											<th>Nombre</th>
+											<th>Fecha</th>
+											<th>Duracion</th>
+											<th>Estado</th>
+											<th>Descripcion</th>
+											<th>Acciones</th>
+										</tr>
+									</thead>
+									<tbody>
+									    {% if object_list %}
+									    {% for Evento in object_list %}
+										<tr class="active">
+											<td>{{ Evento.id }}</td>
+											<td>{{ Evento.nombre }}</td>
+											<td>{{ Evento.fechaEvento }}</td>
+											<td>{{ Evento.duracion }}</td>
+											<td>{{ Evento.estado }}</td>
+											<td>{{ Evento.descripcion }}</td>
+											<td>
+												<a class="btn btn-primary" href="{% url 'eventos:modificar_evento' Evento.id%}"> Modificar</a>
+												<a class="btn btn-danger" href="{% url 'eventos:eliminar_evento' Evento.id%}"> Eliminar</a>	
+											</td>
+										</tr>
+									    {% endfor %}
+									    {% else %}
+									    
+									    <h1> NO HAY NINGÚN REGISTRO</h1>
+									    
+									    {% endif %}
+									</tbody>
+								</table>
+                            </div>
+                        </div>
+                    </div>
+
+{% endblock contenido %}
+

@@ -1,0 +1,39 @@
+{% extends "carga.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="row" width="900px">
+				<!-- begin col-6 -->
+				<div class="col-md-12" width="900px">
+					<div class="m-b-10 f-s-10 m-t-5"><b class="text-inverse">CARD GROUPS</b></div>
+					<!-- begin card-group -->
+					
+					<div class="card-group" width="900px">
+						<!-- begin card -->
+					{% if object_list %}
+					{% for Evento in object_list %}
+						<div class="card bg-white" style="width: 900px">
+							<img class="card-img-top" src="{% static 'static/img/sports.jpg' %}" height="240px" width="900px" alt="Card image cap">
+							<div class="card-block">
+								<h4 class="card-title">{{ Evento.nombre }}</h4>
+								<p class="card-text">{{ Evento.descripcion }}</p>
+								<a class="btn btn-primary" href="{% url 'eventos:ver_evento' Evento.id%}"> Ver mas</a>	
+								<br> </br>
+				
+							</div>
+						</div>
+						<!-- end card -->
+					{% endfor %}
+					{% else %}
+					<h1> NO HAY NINGÚN REGISTRO</h1>
+					{% endif %}
+					</div>
+					<!-- end card-columns -->
+				</div>
+				<!-- end col-6 -->
+</div>
+
+
+{% endblock contenido %}
