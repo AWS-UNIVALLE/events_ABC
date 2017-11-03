@@ -2,7 +2,7 @@ from django.db import models
 from Apps.Usuarios.models import Usuario
 # Create your models here.
 class Evento(models.Model):
-    nombre = models.CharField(max_length=50)
+    nombre = models.CharField(max_length=100)
     fechaEvento = models.DateField()
     descripcion = models.TextField()
     duracion = models.IntegerField()

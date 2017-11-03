@@ -25,7 +25,7 @@ class EventoForm(forms.ModelForm):
 
         }
         widgets = {
-            'nombre' : forms.TextInput(attrs={'class':'form-control'}),
+            'nombre' : forms.TextInput(attrs={'class':'form-control', 'placeholder': 'Requerido. 100 Caracteres maximo.'}),
             'fechaEvento' : forms.SelectDateWidget(),
             'duracion': forms.DateInput(),
             'estado': forms.Select(choices=CHOICES, attrs={'class':'form-control'}),

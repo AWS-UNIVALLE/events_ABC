@@ -14,7 +14,7 @@ urlpatterns = [
     url(r'^modificarusuario/(?P<pk>\d+)/$',modificarUsuario.as_view(), name='modificar_usuario'),
     url(r'^eliminarusuario/(?P<pk>\d+)/$', eliminarUsuario.as_view(), name='eliminar_usuario'),
     url(r'^inicio/', listareventos.as_view(), name='iniciow'),
-    url(r'^crearusuario', login_required(agregarUsuario), name='crear_usuario'),
+    url(r'^crearusuario', agregarUsuario, name='crear_usuario'),
     
 
 
