@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<form method="POST">
+    {% csrf_token %}
+    <h3> ¿Desea eliminar el evento {{ object.nombre}}?</h3>
+     <button  class="btn btn-danger" type="submit">Aceptar</button>      
+     <a class="btn btn-default" href="{% url 'eventos:listar_eventos' %}">Cancelar</a>
+</form>
+{% endblock contenido %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<form method="POST">
+    {% csrf_token %}
+    <h3> ¿Desea eliminar el usuario {{ object.nombre}} {{object.apellidos}}?</h3>
+     <button  class="btn btn-danger" type="submit">Aceptar</button>      
+     <a class="btn btn-default" href="{% url 'usuarios:listar_usuarios' %}">Cancelar</a>
+</form>
+{% endblock contenido %}
