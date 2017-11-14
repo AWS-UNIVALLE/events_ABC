@@ -35,5 +35,6 @@ urlpatterns = [
     url(r'usuarios/', include('Apps.Usuarios.urls', namespace='usuarios')),
 
 
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'Apps.Usuarios',
     'Apps.Eventos',
     'Apps.Actividades',
+
     'Apps.Noticias',
     'Apps.Participantes',
 ]
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',

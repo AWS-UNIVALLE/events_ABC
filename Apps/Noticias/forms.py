@@ -10,6 +10,7 @@ class NoticiaForm(forms.ModelForm):
             'titulo',
             'fechaNoticia',  
             'contenido',
+
         ]
         labels = {
             'titulo' : 'Titulo Noticia',
