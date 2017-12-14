@@ -37,11 +37,9 @@ urlpatterns = [
     url(r'^actividades/', include('Apps.Actividades.urls', namespace='actividades')),
     url(r'noticias/', include('Apps.Noticias.urls', namespace='noticias')),
     url(r'usuarios/', include('Apps.Usuarios.urls', namespace='usuarios')),
+    url(r'inscripciones/', include('Apps.Inscripciones.urls', namespace = 'inscripciones'))
     url(r'participantes/', include('Apps.Participantes.urls', namespace='participantes')),
     url(r'dashboard/', include('Apps.Dashboard.urls', namespace='dashboard')),
-
-
-
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

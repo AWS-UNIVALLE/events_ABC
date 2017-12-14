@@ -41,9 +41,10 @@ INSTALLED_APPS = [
     'Apps.Usuarios',
     'Apps.Eventos',
     'Apps.Actividades',
-
     'Apps.Noticias',
     'Apps.Participantes',
+    'Apps.Inscripciones',
+    'django_tables2',
 ]
 
 ## 'django.middleware.csrf.CsrfViewMiddleware',
