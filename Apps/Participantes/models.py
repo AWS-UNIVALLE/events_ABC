@@ -6,3 +6,5 @@ from django.contrib.auth.models import User
 class Participante(User):
     cedula = models.IntegerField()
     
+    
+    

@@ -31,3 +31,8 @@ class verEvento(ListView):
     model = Evento
     template_name = 'unEvento.html'
 # Create your views here.
+
+
+def paginaPrincipal(request):
+    return render(request, 'paginaPrincipal.html')
+    

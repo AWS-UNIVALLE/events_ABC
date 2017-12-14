@@ -8,7 +8,7 @@ from Apps.Usuarios.views import listarUsuarios
 #from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
-    url(r'^$', index, name='index'),
+    
     #url(r'^crearusuario', login_required(crearUsuario.as_view()), name='crear_usuario'),
     url(r'^listarusuarios', listarUsuarios.as_view(), name='listar_usuarios'),
     url(r'^modificarusuario/(?P<pk>\d+)/$',modificarUsuario.as_view(), name='modificar_usuario'),

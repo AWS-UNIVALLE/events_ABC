@@ -85,9 +85,9 @@ WSGI_APPLICATION = 'ProyectoABC.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'database',
-        'USER': 'admin',
-        'PASSWORD': 'WWW-UNIVALLE',
+        'NAME': 'proyectowww',
+        'USER': 'camiloja',
+        'PASSWORD': 'camiloja',
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -132,3 +132,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (BASE_DIR, 'static')
+
+LOGIN_REDIRECT_URL = reverse_lazy('usuarios:listar_usuarios')

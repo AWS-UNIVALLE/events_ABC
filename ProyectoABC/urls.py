@@ -22,17 +22,24 @@ from Apps.Actividades.views import *
 from Apps.Eventos.views import *
 from Apps.Noticias.views import *
 from Apps.Usuarios.views import *
+from django.contrib.auth.views import login, logout_then_login
 
 #from Apps.Participantes.views import *
 #from django.contrib.auth.views import login, logout_then_login
+#URLS PRINCIPALES
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+   
+    url(r'^accounts/login/', login, {'template_name':'loginparticipante.html'}, name='login'),
     url(r'^eventos/', include('Apps.Eventos.urls', namespace='eventos')),
     url(r'^actividades/', include('Apps.Actividades.urls', namespace='actividades')),
     url(r'noticias/', include('Apps.Noticias.urls', namespace='noticias')),
     url(r'usuarios/', include('Apps.Usuarios.urls', namespace='usuarios')),
     url(r'inscripciones/', include('Apps.Inscripciones.urls', namespace = 'inscripciones'))
+    url(r'participantes/', include('Apps.Participantes.urls', namespace='participantes')),
+    url(r'dashboard/', include('Apps.Dashboard.urls', namespace='dashboard')),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

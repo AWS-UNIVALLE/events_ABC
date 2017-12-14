@@ -4,9 +4,11 @@ from django.conf.urls.static import static
 from django.conf import settings
 from Apps.Eventos.views import *
 #from django.contrib.auth.decorators import login_required
+#URLS EVENTOs
 
 urlpatterns = [
     url(r'^$', listarEventos.as_view()),
+    url(r'^principal', paginaPrincipal),
     url(r'^crearevento$', crearEvento.as_view(), name='crear_evento'),
     url(r'^listareventos$', listarEventos.as_view(), name='listar_eventos'),
     url(r'^modificarevento/(?P<pk>\d+)/$', modificarEvento.as_view(), name='modificar_evento'),
