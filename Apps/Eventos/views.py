@@ -9,7 +9,7 @@ from django.core.urlresolvers import reverse_lazy
 class crearEvento(CreateView):
     model = Evento
     form_class = EventoForm
-    template_name = 'formulario_crearevento.1.html'
+    template_name = 'formulario_crearevento1.html'
     success_url = reverse_lazy('eventos:listar_eventos')
     
 class listarEventos(ListView):
@@ -19,7 +19,7 @@ class listarEventos(ListView):
 class modificarEvento(UpdateView):
     model = Evento
     form_class = EventoForm
-    template_name = 'formulario_crearevento.1.html'
+    template_name = 'formulario_crearevento1.html'
     success_url = reverse_lazy('eventos:listar_eventos')
     
 class eliminarEvento(DeleteView):

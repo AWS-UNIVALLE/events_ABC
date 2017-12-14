@@ -41,18 +41,18 @@ INSTALLED_APPS = [
     'Apps.Usuarios',
     'Apps.Eventos',
     'Apps.Actividades',
-    'Apps.Calendario',
-    'Apps.Dashboard',
-    'Apps.Pagos',
     'Apps.Noticias',
     'Apps.Participantes',
+    'Apps.Inscripciones',
+    'django_tables2',
 ]
 
+## 'django.middleware.csrf.CsrfViewMiddleware',
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -132,6 +132,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (BASE_DIR, 'static')
-
-LOGIN_REDIRECT_URL = reverse_lazy('usuarios:iniciow')
-LOGOUT_REDIRECT_URL = reverse_lazy('../templates/loginParticipante.html')

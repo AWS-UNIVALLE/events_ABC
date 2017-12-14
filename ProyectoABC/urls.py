@@ -18,26 +18,21 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
 from Apps.Actividades.views import *
-from Apps.Dashboard.views import *
+#from Apps.Dashboard.views import *
 from Apps.Eventos.views import *
 from Apps.Noticias.views import *
 from Apps.Usuarios.views import *
 
-from Apps.Participantes.views import *
-from django.contrib.auth.views import login, logout_then_login
+#from Apps.Participantes.views import *
+#from django.contrib.auth.views import login, logout_then_login
 
 
 urlpatterns = [
-    url(r'^$', login, {'template_name':'../templates/loginparticipante.html'}, name='login'),
-    url(r'^accounts/login/$', login, {'template_name':'../templates/loginparticipante.html'}, name='login'),
-    url(r'^logout/$', logout_then_login, name='logout'),
     url(r'^admin/', admin.site.urls),
     url(r'^eventos/', include('Apps.Eventos.urls', namespace='eventos')),
     url(r'^actividades/', include('Apps.Actividades.urls', namespace='actividades')),
     url(r'noticias/', include('Apps.Noticias.urls', namespace='noticias')),
     url(r'usuarios/', include('Apps.Usuarios.urls', namespace='usuarios')),
-    url(r'participantes/', include('Apps.Participantes.urls', namespace='participantes')),
-
-
+    url(r'inscripciones/', include('Apps.Inscripciones.urls', namespace = 'inscripciones'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

@@ -34,13 +34,13 @@ class UsuarioForm(forms.ModelForm):
 
         }
         widgets = {
-            'first_name' : forms.TextInput(attrs={'class':'form-control'}),
-            'last_name' : forms.TextInput(attrs={'class':'form-control'}),
-            'cedula' : forms.TextInput(attrs={'class':'form-control'}),
-            'email' : forms.EmailInput(attrs={'class':'form-control'}),
+            'first_name' : forms.TextInput(attrs={'class':'form-control', 'placeholder':'Requerido. 100 Caracteres. Solo letras'}),
+            'last_name' : forms.TextInput(attrs={'class':'form-control', 'placeholder':'Requerido. 100 Caracteres. Solo letras'}),
+            'cedula' : forms.TextInput(attrs={'class':'form-control', 'placeholder':'Requerido. 20 Caracteres. Letras y numeros'}),
+            'email' : forms.EmailInput(attrs={'class':'form-control', 'placeholder':'Requerido. Ingrese correo valido'}),
             'password' : forms.PasswordInput(attrs={'class':'form-control'}),
-            'telefono' : forms.TextInput(attrs={'class':'form-control'}),
-            'telefono_celular': forms.TextInput(attrs={'class':'form-control'}),
+            'telefono' : forms.TextInput(attrs={'class':'form-control', 'placeholder':'Requerido. 30 Caracteres.'}),
+            'telefono_celular': forms.TextInput(attrs={'class':'form-control', 'placeholder': 'Requerido. 30 Caracteres'}),
             'cargo' : forms.Select(choices=CHOICES, attrs={'class':'form-control'}),
 
         }

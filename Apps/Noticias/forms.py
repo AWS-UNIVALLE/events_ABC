@@ -10,19 +10,17 @@ class NoticiaForm(forms.ModelForm):
             'titulo',
             'fechaNoticia',  
             'contenido',
-            'imagen',
+
         ]
         labels = {
             'titulo' : 'Titulo Noticia',
             'fechaNoticia' : 'Fecha',   
             'contenido' : 'Contenido',
-            'imagen' : 'Imagen',
 
         }
         widgets = {
-            'titulo' : forms.TextInput(attrs={'class':'form-control'}),
+            'titulo' : forms.TextInput(attrs={'class':'form-control', 'placeholder':'Requerido. 100 Caracteres maximo.'}),
             'fechaNoticia' : forms.SelectDateWidget(),
             'contenido' : forms.Textarea(),
-            'imagen' : forms.FileInput(),
 
         }

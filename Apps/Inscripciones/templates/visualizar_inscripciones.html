@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load render_table from django_tables2 %}
+
+{% block contenido %}
+
+<div class="panel panel-inverse" data-sortable-id="table-basic-6" style="">
+    <div class="panel-heading">
+        <div class="panel-heading-btn">
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand" data-original-title="" title="" data-init="true"><i class="fa fa-expand"></i></a>
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload" data-original-title="" title="" data-init="true"><i class="fa fa-repeat"></i></a>
+        </div>
+        <h4 class="panel-title">Eventos sin preinscripcion: Es posible preinscribirse a estos eventos. </h4>
+    </div>
+    <div class="panel-body">
+         {% render_table tabla_eventos %}
+    </div>
+    
+    <div class="panel-heading">
+        <div class="panel-heading-btn">
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand" data-original-title="" title="" data-init="true"><i class="fa fa-expand"></i></a>
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload" data-original-title="" title="" data-init="true"><i class="fa fa-repeat"></i></a>
+        </div>
+        <h4 class="panel-title">Preinscripciones a eventos: Consulte el estado de sus preinscripciones. </h4>
+    </div>
+    <div class="panel-body">
+         {% render_table tabla_preinscripciones %}
+    </div>
+    
+    <div class="panel-heading">
+        <div class="panel-heading-btn">
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand" data-original-title="" title="" data-init="true"><i class="fa fa-expand"></i></a>
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload" data-original-title="" title="" data-init="true"><i class="fa fa-repeat"></i></a>
+        </div>
+        <h4 class="panel-title">Inscripciones a eventos: Consulte o confirme su inscripcion. </h4>
+    </div>
+    <div class="panel-body">
+         {% render_table tabla_inscripciones %}
+    </div>
+    
+    <div class="panel-heading">
+        <div class="panel-heading-btn">
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand" data-original-title="" title="" data-init="true"><i class="fa fa-expand"></i></a>
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload" data-original-title="" title="" data-init="true"><i class="fa fa-repeat"></i></a>
+        </div>
+        <h4 class="panel-title">Eventos y pagos: Consulte los pagos que ha realizado por eventos. </h4>
+    </div>
+    <div class="panel-body">
+         {% render_table tabla_pagos %}
+    </div>
+    
+</div>
+
+{% endblock contenido %}

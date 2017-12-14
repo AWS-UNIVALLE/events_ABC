@@ -23,7 +23,7 @@ class ActividadForm(forms.ModelForm):
 
         }
         widgets = {
-            'nombre' : forms.TextInput(attrs={'class':'form-control'}),
+            'nombre' : forms.TextInput(attrs={'class':'form-control', 'placeholder':'Requerido. 100 Caracteres maximo.'}),
             'fechaActividad' : forms.SelectDateWidget(),
             'duracion': forms.DateInput(),
             'descripcion' : forms.Textarea(),
